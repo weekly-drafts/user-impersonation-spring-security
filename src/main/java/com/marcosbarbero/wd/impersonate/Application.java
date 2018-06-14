@@ -4,9 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UserImpersonationSpringSecurityApplication {
+public class Application {
 
-	public static void main(String[] args) {
-		SpringApplication.run(UserImpersonationSpringSecurityApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+
 }

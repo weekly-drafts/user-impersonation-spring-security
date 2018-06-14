@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Switch User!</title>
+</head>
+<body>
+<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+
+<form method="GET" th:action="@{/impersonate}" class="form">
+    <label for="usernameField">User name:</label>
+    <input type="text" name="username" id="usernameField" />
+    <input type="submit" value="Switch User" />
+</form>
+
+
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+
+</body>
+</html>
